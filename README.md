@@ -25,46 +25,51 @@ This exists as a **helper bridge**: most current code agents can’t talk to the
 
 ## Installation
 
-Project-local install (recommended):
+### 1. Install the package
 
 ```bash
-npm install --save-dev @t09tanaka/ts-rename-helper-mcp
-# or
+npm i -D @t09tanaka/ts-rename-helper-mcp
+```
+
+```bash
 pnpm add -D @t09tanaka/ts-rename-helper-mcp
-# or
+```
+
+```bash
 yarn add -D @t09tanaka/ts-rename-helper-mcp
 ```
 
-Requirements:
+### 2. Add to your MCP client
 
-- Node.js 18+
-- A TypeScript project with a valid `tsconfig.json` at or under `projectRoot`
+**Claude Code:**
 
----
+```bash
+claude mcp add ts-rename-helper npx -- @t09tanaka/ts-rename-helper-mcp
+```
 
-## Usage
+**OpenAI Codex:**
 
-### MCP configuration example
+```bash
+codex mcp add ts-rename-helper npx -- @t09tanaka/ts-rename-helper-mcp
+```
 
-Example for an MCP client that uses a JSON config (e.g. Claude Desktop style):
+**Other MCP clients (JSON config):**
 
 ```jsonc
 {
   "mcpServers": {
     "ts-rename-helper": {
       "command": "npx",
-      "args": ["-y", "@t09tanaka/ts-rename-helper-mcp"],
-      "env": {
-        // optional: override default working directory
-        // "TS_RENAME_HELPER_PROJECT_ROOT": "/absolute/path/to/your/project"
-      },
-    },
-  },
+      "args": ["@t09tanaka/ts-rename-helper-mcp"]
+    }
+  }
 }
 ```
 
-The server will typically run in the current working directory of the client process.
-Agents should pass `projectRoot` explicitly in tool calls if they work with multiple repos.
+### Requirements
+
+- Node.js 18+
+- A TypeScript project with a valid `tsconfig.json`
 
 ---
 
