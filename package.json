@@ -1,12 +1,25 @@
 {
   "name": "@t09tanaka/ts-rename-helper-mcp",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "MCP server for TypeScript symbol renaming and file/directory move planning",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
     "ts-rename-helper-mcp": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t09tanaka/ts-rename-helper-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t09tanaka/ts-rename-helper-mcp/issues"
+  },
+  "homepage": "https://github.com/t09tanaka/ts-rename-helper-mcp#readme",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
