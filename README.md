@@ -1,4 +1,3 @@
-````markdown
 # @t09tanaka/ts-rename-helper-mcp
 
 An MCP server that provides TypeScript symbol renaming and file/directory moves for coding agents.
@@ -35,7 +34,6 @@ pnpm add -D @t09tanaka/ts-rename-helper-mcp
 # or
 yarn add -D @t09tanaka/ts-rename-helper-mcp
 ```
-````
 
 Requirements:
 
@@ -284,7 +282,3 @@ A coding agent integrating this MCP server would usually:
 ## License
 
 MIT © 2025 Takuto Tanaka
-
-```
-::contentReference[oaicite:0]{index=0}
-```
